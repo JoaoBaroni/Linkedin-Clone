@@ -17,5 +17,8 @@
 
 .inputOption:hover{
   background-color: #EBEBEB;
-  
+}
+
+.inputOption > h4 {
+  margin-left: 5px;
 }
