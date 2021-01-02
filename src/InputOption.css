@@ -1,0 +1,21 @@
+.inputOption{
+  display: flex; 
+  padding: 0 16px;
+  color: rgba(0, 0, 0, 60%);
+  max-width: 480px;
+  box-sizing: border-box;
+  justify-content: center;
+  vertical-align: middle;
+  min-height: 48px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: 167ms;
+  transition-property: background-color,box-shadow,color;
+}
+
+.inputOption:hover{
+  background-color: #EBEBEB;
+  
+}

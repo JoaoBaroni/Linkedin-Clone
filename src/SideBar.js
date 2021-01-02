@@ -3,10 +3,22 @@ import React from "react";
 import "./SideBar.css";
 
 function SideBar() {
+  const recentItem = (topic) => {
+    return (
+      <div className="sidebar__recentItem">
+        <span className="sidebar__hash">#</span>
+        <p>{topic}</p>
+      </div>
+    );
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <img src="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" />
+        <img
+          src="https://images.unsplash.com/photo-1470290449668-02dd93d9420a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          alt=""
+        />
         <Avatar className="sidebar__avatar" />
         <h2>João Baroni</h2>
         <h4>joaovitorbaroni@outlook.com</h4>
@@ -26,6 +38,11 @@ function SideBar() {
 
       <div className="sidebar__bottom">
         <p>Recent</p>
+        {recentItem("reactjs")}
+        {recentItem("programming")}
+        {recentItem("software")}
+        {recentItem("design")}
+        {recentItem("developer")}
       </div>
     </div>
   );
