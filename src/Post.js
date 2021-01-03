@@ -6,8 +6,8 @@ import InputOption from "./InputOption";
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import CommentOutlinedIcon from '@material-ui/icons/CommentOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
-
-function Post({name, description, message, photoUrl}) {
+import moment from 'moment'; 
+function Post({name, description, message, photoUrl, timestamp}) {
 
 
   return (

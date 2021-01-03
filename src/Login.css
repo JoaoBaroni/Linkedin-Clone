@@ -4,9 +4,12 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  flex: 1;
 }
 
 .login__form {
+  justify-content: center;
+  align-items: center;
   height: 416px;
   width: 380px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
