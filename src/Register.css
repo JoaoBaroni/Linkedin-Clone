@@ -1,4 +1,4 @@
-.login {
+.register {
   display: flex;
   place-items: center;
   justify-content: center;
@@ -7,8 +7,8 @@
   margin-top: 5rem;
 }
 
-.login__form {
-  height: 416px;
+.register__form {
+  height: auto;
   width: 380px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border-radius: 8px;
@@ -18,21 +18,21 @@
   flex-direction: column;
 }
 
-.login__formTop > h1 {
+.register__formTop > h1 {
   font-weight: 600;
 }
 
-.login__formTop {
+.register__formTop {
   margin-bottom: 15px;
 }
 
-.login__content > form {
+.register__content > form {
   display: flex;
   flex-direction: column;
 }
 
 
-.login__content > form > button {
+.register__content > form > button {
   height: 52px;
   border: none;
   background-color: #0073b1;
@@ -47,19 +47,7 @@
   transition-property: background-color,box-shadow,color;
 }
 
-.login__content > form > button:hover {
+.register__content > form > button:hover {
   background-color: #004182;
-}
-
-.login__information {
-  display: flex;
-  margin-top: 10px;
-  justify-content: center;
-  font-weight: 300;
-  width: 100%;
-}
-
-.login__information > a:visited {
-  text-decoration: none;
 }
 
