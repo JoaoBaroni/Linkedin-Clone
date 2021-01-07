@@ -65,16 +65,16 @@ function Feed() {
         </div>
 
         <div className="feed__inputOptions">
-          <InputOption Icon={ImageIcon} title={"Photo"} color="#70B5F9" />
+          <InputOption Icon={ImageIcon} title={"Foto"} color="#70B5F9" />
           <InputOption
             Icon={SubscriptionsIcon}
             title={"Video"}
             color="#E7A33E"
           />
-          <InputOption Icon={EventNoteIcon} title={"Event"} color="#C0CBCD" />
+          <InputOption Icon={EventNoteIcon} title={"Evento"} color="#C0CBCD" />
           <InputOption
             Icon={CalendarViewDayIcon}
-            title={"Write article"}
+            title={"Escrever artigo"}
             color="#7FC15E"
           />
         </div>

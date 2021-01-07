@@ -28,17 +28,17 @@ function Post({name, description, message, photoUrl, timestamp}) {
       <div className="post__actions">
       <InputOption
             Icon={ThumbUpAltOutlinedIcon}
-            title={"Like"}
+            title={"Gostei"}
             color="rgba(0, 0, 0, 60%)"
           />
             <InputOption
             Icon={CommentOutlinedIcon}
-            title={"Comment"}
+            title={"Comentar"}
             color="rgba(0, 0, 0, 60%)"
           />
             <InputOption
             Icon={ShareOutlinedIcon}
-            title={"Share"}
+            title={"Compartilhar"}
             color="rgba(0, 0, 0, 60%)"
           />
       </div>
