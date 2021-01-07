@@ -6,8 +6,11 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import {useSelector} from 'react-redux';
 
 function Header() {
+  const userProfilePic = useSelector((state) => state.user.user.photoUrl);
+
   return (
     <div className="header">
       <div className="header__left">
@@ -15,17 +18,17 @@ function Header() {
 
         <div className="header__search">
           <SearchIcon />
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Pesquise aqui..." />
         </div>
       </div>
 
       <div className="header__right">
-        <HeaderOption Icon={HomeIcon} title="Home" />
-        <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
-        <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
-        <HeaderOption Icon={ChatIcon} title="Messaging" />
-        <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption avatar={"https://randomuser.me/api/portraits/men/23.jpg"} title="Me" />
+        <HeaderOption Icon={HomeIcon} title="Início" />
+        <HeaderOption Icon={SupervisorAccountIcon} title="Minha rede" />
+        <HeaderOption Icon={BusinessCenterIcon} title="Vagas" />
+        <HeaderOption Icon={ChatIcon} title="Mensagens" />
+        <HeaderOption Icon={NotificationsIcon} title="Notificações" />
+        <HeaderOption avatar={userProfilePic} title="Eu" />
       </div>
     </div>
   )

@@ -4,6 +4,8 @@ import "./Register.css";
 import firebase from "firebase";
 import TextField from "@material-ui/core/TextField";
 import {login} from "./features/counter/userSlice";
+import { makeStyles } from '@material-ui/core/styles';
+import {Link, Redirect, useHistory} from 'react-router-dom';
 
 function Register() {
   const [email, setEmail] = useState({value: "", error: ""});
@@ -11,6 +13,7 @@ function Register() {
   const [photoUrl, setPhotoUrl] = useState("");
   const [nome, setNome] = useState({value: "", error: ""});
   const dispatch = useDispatch();
+  const history = useHistory();
 
 
   const handleEmailChange = e => {
@@ -27,6 +30,7 @@ function Register() {
 
   const handlePhotoUriChange = e => {
     setPhotoUrl(e.target.value);
+    console.log(e.target.value);
   }
 
   function verifyFields(){
@@ -68,13 +72,14 @@ function Register() {
           displayName: nome.value,
           photoURL: photoUrl,
         }).then(() => {
-          dispatch(login({
+            dispatch(login({
             email: usuarioCriado.user.email,
             displayName: nome.value, 
             uid: usuarioCriado.user.uid,
             photoUrl: photoUrl,
           }));
-
+        }).then(() => {
+          history.push("/home");
         });
       });
     }

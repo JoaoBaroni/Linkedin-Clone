@@ -4,12 +4,14 @@ import "./Login.css";
 import firebase from "firebase";
 import TextField from "@material-ui/core/TextField";
 import { login } from "./features/counter/userSlice";
-import { Redirect } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import { selectUser } from "./features/counter/userSlice";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const tryLogin = (e) => {
     e.preventDefault();
@@ -23,9 +25,13 @@ function Login() {
             email: userInfo.user.email,
             displayName: userInfo.user.displayName,
             uid: userInfo.user.uid,
-            photoUrl: userInfo.user.photoUrl,
+            photoUrl: userInfo.user.photoURL,
           })
         );
+        console.log(userInfo);
+      })
+      .then(() => {
+        history.push("/home");
       })
       .catch((error) => {
         console.log(error);
@@ -78,9 +84,9 @@ function Login() {
         <div className="login__information">
           <p>
             Não possui uma conta?{" "}
-            <a href="#">
+            <Link to={'/register'}>
               <b>Cadastre-se aqui!</b>
-            </a>
+            </Link>
           </p>
         </div>
       </div>
